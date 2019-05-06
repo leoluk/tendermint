@@ -36,6 +36,10 @@ const (
 	//   - may be faster is some use-cases (random reads - indexer)
 	//   - use boltdb build tag (go build -tags boltdb)
 	BoltDBBackend DBBackendType = "boltdb"
+	// Experimental FoundationDB backend.
+	//   - fast (maybe)
+	//   - also, broken
+	FoundationDBBackend DBBackendType = "foundationdb"
 )
 
 type dbCreator func(name string, dir string) (DB, error)
